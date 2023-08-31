@@ -23,4 +23,17 @@ const relogio = setInterval(function time() {
     } else {
         diaNoite.classList.add("noite")
     }
+
+    var title = document.querySelector("#title")
+    
+        if (0 <= hr && hr < 6) {
+            title.textContent = "Boa madrugada!"
+        } else if (6 <= hr && hr < 12) {
+            title.textContent = "Bom dia!"
+        } else if (12 <= hr && hr < 18) {
+            title.textContent = "Boa tarde!"
+        } else if (18 <= hr && hr < 24) {
+            title.textContent = "Boa noite!"
+        }
+
 })
